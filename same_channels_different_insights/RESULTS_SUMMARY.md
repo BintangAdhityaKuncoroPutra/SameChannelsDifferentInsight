@@ -174,10 +174,9 @@ Tidak ada fold gagal dan tidak ada keluaran wajib yang hilang. Yang **tidak** di
 
 1. **Ambang penolakan epoch 400 µV**, bukan ambang konvensional 100–150 µV: pada data 7–30 Hz, ambang 150 µV akan menolak 98% epoch S001, 13% S002, dan 100% S003. Ambang ditetapkan setelah melihat distribusi amplitudo, tanpa label atau skor; hanya 1 epoch ditolak.
 2. **Tanpa re-referencing**, agar subset 8 kanal tidak memakai informasi 56 kanal lain lewat average reference.
-3. `component_order="alternate"` pada CSP (2 filter dari tiap ujung spektrum eigen) agar sesuai uraian buku teks; spec hanya menyebut `n_components=4`.
+3. `component_order="alternate"` pada CSP (2 filter dari tiap ujung spektrum eigen) agar sesuai uraian buku teks.
 4. Montage `colin27_1005` = nama baru `standard_1005` di MNE 1.13 (posisi sama).
-5. Nama folder/notebook mengikuti prompt Stage 2 (`same_channels_different_insights/`), bukan `less_is_more_eeg/` di spec.
-6. Kanal Fp1/Fp2/AF7 S003 run 6 bertanda QC tetapi tidak dibuang (spec melarang mengubah ukuran subset); S10 yang memuatnya terpilih oleh CONN pada dua fold S003.
+5. Kanal Fp1/Fp2/AF7 S003 run 6 bertanda QC tetapi tidak dibuang ; S10 yang memuatnya terpilih oleh CONN pada dua fold S003.
 
 ## 9. Keterbatasan utama
 
