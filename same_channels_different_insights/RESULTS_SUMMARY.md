@@ -1,8 +1,4 @@
-# RESULTS_SUMMARY.md — Stage 2
-
-**Proyek:** Same Channels, Different Insights? Comparing EEG Channel Selection for Motor Imagery Classification and Functional Connectivity
-**Dibuat:** 2026-10-19 dari CSV di `outputs/` (angka di file ini disalin terprogram dari CSV, bukan diketik tangan).
-**Notebook:** `Same_Channels_Different_Insights.ipynb` (87 sel; tersimpan **beserta output** eksekusi terverifikasi).
+# RESULTS_SUMMARY.md 
 
 ## 1. Status eksekusi
 
@@ -189,17 +185,9 @@ Tidak ada fold gagal dan tidak ada keluaran wajib yang hilang. Yang **tidak** di
 - CDS hampir setara noise floor; CDS bukan biomarker neural; dapat dipengaruhi SNR/daya dan artefak (frontal/oksipital).
 - Volume conduction, source mixing, dan referensi bersama tidak sepenuhnya dihapus oleh wPLI²; semua hubungan level sensor, tanpa makna kausal/anatomis.
 - Seleksi dari 10 kandidat tumpang tindih: winner's curse dan ketidakstabilan antar-fold.
-- Literatur: banyak sumber hanya AB/AB+; jangan menyatakan metode Lou dkk. (2023) secara rinci.
 
-## 10. Rekomendasi untuk diskusi Stage 3
 
-- Laporkan hasil per subjek dan per fold, bukan hanya rata-rata ALL; S003 dekat tingkat acak untuk semua pendekatan.
-- Pesan utama yang didukung data: kriteria klasifikasi dan konektivitas jarang memilih subset yang sama (2/9 fold), seleksi CLS tidak pernah lebih buruk dari S01 pada BA uji dalam data ini, sedangkan seleksi CONN memberi BA rata-rata lebih rendah dan tidak mempertahankan keunggulan CDS di run uji. Bingkai sebagai deskriptif.
-- Tekankan audit noise floor: dengan jumlah trial ini, diskriminasi konektivitas sulit dibedakan dari noise, sehingga RQ3 lebih tepat dijawab "tidak dapat dibedakan secara andal" daripada "CLS menangkap konektivitas".
-- Sebut pilihan S10 oleh CONN dan kanal frontal bertanda QC sebagai kemungkinan pengaruh artefak (hipotesis, belum diuji).
-- Hindari kata "signifikan", "koneksi otak", dan "kausal".
-
-## 11. Cara menjalankan ulang
+## 10. Cara menjalankan ulang
 
 ```bash
 pip install -r requirements.txt
