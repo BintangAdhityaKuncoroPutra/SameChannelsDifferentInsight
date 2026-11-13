@@ -26,8 +26,6 @@ Kelompok ke-3 menunjukkan bahwa **menghubungkan informasi antar-kanal dengan pem
 
 ## 3. Matriks literatur
 
-Kolom: Dataset | Seleksi kanal | Klasifikasi | Konektivitas | Evaluasi | Temuan | Keterbatasan | Relevansi.
-
 ### 3.1 Lou dkk. (2023) — primary anchor 
 - **Judul/DOI:** *Less Is More: …* — 10.1109/TNSRE.2023.3252610
 - **Dataset:** EEGMMI (eegmmidb, PhysioNet), pengujian subject-independent, tugas imajinasi buka-tutup kepalan kiri/kanan.
@@ -79,8 +77,8 @@ Kolom: Dataset | Seleksi kanal | Klasifikasi | Konektivitas | Evaluasi | Temuan 
 - Mengulas algoritma seleksi kanal MI, tujuan, dan pasangan klasifikasinya pada berbagai dataset; menitikberatkan metode yang memilih kanal lebih sedikit dengan presisi tinggi. Reviewer peer-review mencatat bahwa analisis dalam review dinilai kurang mendalam oleh salah satu reviewer, jadi review ini lebih cocok sebagai peta, bukan bukti evaluatif.
 
 ### 3.8 Dasar metodologis
-- **Vinck dkk. (2011) — AB+:** memperkenalkan wPLI; menunjukkan keunggulan atas PLI (kurang sensitif terhadap noise tak berkorelasi dan lebih berdaya mendeteksi perubahan), dan membahas **sample-size bias**. Ini mendukung keputusan C2 (debiased) di spec.
-- **Nolte dkk. (2004) — AB+:** bagian imajiner coherency tidak dapat dinaikkan secara palsu oleh volume conduction sumber independen.
+- **Vinck dkk. (2011) :** memperkenalkan wPLI; menunjukkan keunggulan atas PLI (kurang sensitif terhadap noise tak berkorelasi dan lebih berdaya mendeteksi perubahan), dan membahas **sample-size bias**. Ini mendukung keputusan C2 (debiased) di spec.
+- **Nolte dkk. (2004) :** bagian imajiner coherency tidak dapat dinaikkan secara palsu oleh volume conduction sumber independen.
 
 ## 4. Sintesis: apa yang sudah dan belum dijawab
 
