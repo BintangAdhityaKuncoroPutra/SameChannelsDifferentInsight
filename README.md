@@ -30,7 +30,7 @@ Setiap subjek dievaluasi dengan skema *leave-one-run-out*. Dua run dipakai untuk
 
 CLS memperoleh rata-rata tertinggi pada kedua metrik, sementara CLS dan CONN memilih subset yang sama hanya pada 2 dari 9 fold. Banyak skor konektivitas berada dekat tingkat yang diperoleh ketika label kelas diacak. Dengan tiga subjek dan evaluasi antar-run dalam subjek, hasil ini bersifat deskriptif dan belum menguji generalisasi ke subjek baru.
 
-![Balanced accuracy pada run uji untuk tiga pendekatan seleksi kanal](outputs/figures/09_balanced_accuracy_by_approach.png)
+![Balanced accuracy pada run uji untuk tiga pendekatan seleksi kanal](same_channels_different_insights/outputs/figures/09_balanced_accuracy_by_approach.png)
 
 ## Menjalankan notebook
 
@@ -50,6 +50,5 @@ CLS memperoleh rata-rata tertinggi pada kedua metrik, sementara CLS dan CONN mem
 | --- | --- |
 | [Notebook eksperimen](Same_Channels_Different_Insights.ipynb) | Akuisisi data, prapemrosesan, seleksi kanal, evaluasi, dan visualisasi |
 | [Ringkasan hasil](RESULTS_SUMMARY.md) | Hasil per subjek, audit permutasi, dan keterbatasan |
-| [Spesifikasi proyek](PROJECT_SPEC.md) | Pertanyaan riset dan rancangan eksperimen |
 | [Landasan teori](THEORETICAL_FRAMEWORK.md), [tinjauan pustaka](LITERATURE_REVIEW.md), dan [bibliografi](references.bib) | Konsep EEG, metode, dan sumber ilmiah |
 | [Outputs](outputs/) | Tabel hasil, log eksperimen, dan grafik |
