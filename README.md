@@ -49,6 +49,6 @@ CLS memperoleh rata-rata tertinggi pada kedua metrik, sementara CLS dan CONN mem
 | File atau folder | Isi |
 | --- | --- |
 | [Notebook eksperimen](Same_Channels_Different_Insights.ipynb) | Akuisisi data, prapemrosesan, seleksi kanal, evaluasi, dan visualisasi |
-| [Ringkasan hasil](RESULTS_SUMMARY.md) | Hasil per subjek, audit permutasi, dan keterbatasan |
-| [Landasan teori](THEORETICAL_FRAMEWORK.md), [tinjauan pustaka](LITERATURE_REVIEW.md), dan [bibliografi](references.bib) | Konsep EEG, metode, dan sumber ilmiah |
-| [Outputs](outputs/) | Tabel hasil, log eksperimen, dan grafik |
+| [Ringkasan hasil](same_channels_different_insights/RESULTS_SUMMARY.md) | Hasil per subjek, audit permutasi, dan keterbatasan |
+| [Landasan teori](same_channels_different_insights/THEORETICAL_FRAMEWORK.md), [tinjauan pustaka](LITERATURE_REVIEW.md), dan [bibliografi](references.bib) | Konsep EEG, metode, dan sumber ilmiah |
+| [Outputs](same_channels_different_insights/outputs/) | Tabel hasil, log eksperimen, dan grafik |
