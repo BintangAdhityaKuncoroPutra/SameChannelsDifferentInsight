@@ -1,0 +1,13 @@
+# Versi yang dipakai saat eksekusi terverifikasi (19 Okt 2026, Python 3.13.16).
+# Versi lain yang berdekatan kemungkinan berjalan, tetapi angka hanya dijamin identik dengan versi ini.
+mne==1.13.2
+mne-connectivity==0.9.0
+numpy==2.5.3
+scipy==1.18.1
+scikit-learn==1.9.1
+pandas==3.0.5
+matplotlib==3.11.2
+networkx==3.7
+jupyter==1.1.1
+nbconvert==7.17.2
+ipykernel==7.4.0

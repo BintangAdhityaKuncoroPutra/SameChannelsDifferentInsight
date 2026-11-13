@@ -1,0 +1,10 @@
+subject,outer_test_run,status,error,runtime_s
+S001,14,ok,,16.1
+S001,10,ok,,16.4
+S001,6,ok,,17.6
+S002,14,ok,,18.0
+S002,10,ok,,18.0
+S002,6,ok,,18.9
+S003,14,ok,,17.6
+S003,10,ok,,16.5
+S003,6,ok,,18.0

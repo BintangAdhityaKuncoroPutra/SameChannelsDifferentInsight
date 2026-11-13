@@ -1,0 +1,126 @@
+{
+  "executed_at_utc": "2026-10-19T06:04:23.639461+00:00",
+  "subjects": [
+    1,
+    2,
+    3
+  ],
+  "runs": [
+    6,
+    10,
+    14
+  ],
+  "seed": 20261019,
+  "bandpass_Hz": [
+    7.0,
+    30.0
+  ],
+  "epoch_window_s": [
+    1.0,
+    2.5
+  ],
+  "connectivity_band_Hz": [
+    8.0,
+    12.0
+  ],
+  "connectivity_method": "wpli2_debiased, multitaper, faverage",
+  "csp": {
+    "n_components": 4,
+    "reg": null,
+    "log": true,
+    "norm_trace": false,
+    "component_order": "alternate"
+  },
+  "reject_ptp_uV": 400.0,
+  "reference": "original EDF reference (no re-referencing)",
+  "ica": "not applied",
+  "n_permutations_CDSx": 100,
+  "montage": "colin27_1005",
+  "selection_rule": "argmax; ties -> smallest subset_id",
+  "primary_connectivity_selection": "CDS_train",
+  "versions": {
+    "python": "3.13.16",
+    "mne": "1.13.2",
+    "mne_connectivity": "0.9.0",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "scikit_learn": "1.9.1",
+    "pandas": "3.0.5",
+    "matplotlib": "3.11.2",
+    "networkx": "3.7"
+  },
+  "data_files": [
+    {
+      "subject": 1,
+      "run": 6,
+      "file": "S001R06.edf",
+      "source": "mne.datasets.eegbci (physionet.org)",
+      "size_bytes": 2596896,
+      "sha256_matches_official": true
+    },
+    {
+      "subject": 1,
+      "run": 10,
+      "file": "S001R10.edf",
+      "source": "mne.datasets.eegbci (physionet.org)",
+      "size_bytes": 2596896,
+      "sha256_matches_official": true
+    },
+    {
+      "subject": 1,
+      "run": 14,
+      "file": "S001R14.edf",
+      "source": "mne.datasets.eegbci (physionet.org)",
+      "size_bytes": 2596896,
+      "sha256_matches_official": true
+    },
+    {
+      "subject": 2,
+      "run": 6,
+      "file": "S002R06.edf",
+      "source": "mne.datasets.eegbci (physionet.org)",
+      "size_bytes": 2555616,
+      "sha256_matches_official": true
+    },
+    {
+      "subject": 2,
+      "run": 10,
+      "file": "S002R10.edf",
+      "source": "mne.datasets.eegbci (physionet.org)",
+      "size_bytes": 2555616,
+      "sha256_matches_official": true
+    },
+    {
+      "subject": 2,
+      "run": 14,
+      "file": "S002R14.edf",
+      "source": "mne.datasets.eegbci (physionet.org)",
+      "size_bytes": 2555616,
+      "sha256_matches_official": true
+    },
+    {
+      "subject": 3,
+      "run": 6,
+      "file": "S003R06.edf",
+      "source": "mne.datasets.eegbci (physionet.org)",
+      "size_bytes": 2596896,
+      "sha256_matches_official": true
+    },
+    {
+      "subject": 3,
+      "run": 10,
+      "file": "S003R10.edf",
+      "source": "mne.datasets.eegbci (physionet.org)",
+      "size_bytes": 2596896,
+      "sha256_matches_official": true
+    },
+    {
+      "subject": 3,
+      "run": 14,
+      "file": "S003R14.edf",
+      "source": "mne.datasets.eegbci (physionet.org)",
+      "size_bytes": 2596896,
+      "sha256_matches_official": true
+    }
+  ]
+}

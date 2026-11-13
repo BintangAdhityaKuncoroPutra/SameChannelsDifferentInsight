@@ -1,0 +1,204 @@
+% references.bib — Stage 1 harmonized, 19 Oct 2026
+% Aturan: hanya field yang terkonfirmasi dari halaman penerbit/repositori/indeks yang dibuka
+% pada sesi Stage 1. Field yang TIDAK terkonfirmasi sengaja dikosongkan (ditandai % VERIFY),
+% bukan ditebak. Jalankan pengecekan akhir terhadap halaman penerbit sebelum Stage 3.
+
+% ---------- Review dan anchor (channel selection MI) ----------
+
+@article{abdullah2022,
+  author  = {Abdullah and Faye, Ibrahima and Islam, Md Rafiqul},
+  title   = {{EEG} Channel Selection Techniques in Motor Imagery Applications: A Review and New Perspectives},
+  journal = {Bioengineering},
+  year    = {2022},
+  volume  = {9},
+  number  = {12},
+  pages   = {726},
+  doi     = {10.3390/bioengineering9120726}
+}
+
+@article{lou2023,
+  author  = {Lou, Haowei and Ye, Zesheng and Yao, Lina and Zhang, Yu},
+  title   = {Less Is More: Brain Functional Connectivity Empowered Generalizable Intention Classification With Task-Relevant Channel Selection},
+  journal = {IEEE Transactions on Neural Systems and Rehabilitation Engineering},
+  year    = {2023},
+  doi     = {10.1109/TNSRE.2023.3252610},
+  volume = {31},
+  pages = {1888--1899}
+}
+
+@article{varsehi2021,
+  author  = {Varsehi, Hesam and Firoozabadi, S. Mohammad P.},
+  title   = {An {EEG} channel selection method for motor imagery based brain--computer interface and neurofeedback using {G}ranger causality},
+  journal = {Neural Networks},
+  year    = {2021},
+  volume  = {133},
+  pages = {193--206},
+  doi = {10.1016/j.neunet.2020.11.002}
+}
+
+@article{liang2023,
+  author  = {Liang, Wei and Jin, Jing and Daly, Ian and Sun, Hao and Wang, Xingyu and Cichocki, Andrzej},
+  title   = {Novel channel selection model based on graph convolutional network for motor imagery},
+  journal = {Cognitive Neurodynamics},
+  year    = {2023},
+  doi     = {10.1007/s11571-022-09892-1}
+  % VERIFY: nama jurnal diambil dari prefiks DOI, bukan dari halaman yang menyebut jurnalnya; volume/halaman belum terkonfirmasi
+}
+
+@article{parkchung2020,
+  author  = {Park, Yongkoo and Chung, Wonzoo},
+  title   = {Optimal Channel Selection Using Correlation Coefficient for {CSP} Based {EEG} Classification},
+  journal = {IEEE Access},
+  year    = {2020},
+  volume  = {8},
+  pages   = {111514--111521},
+  doi     = {10.1109/ACCESS.2020.3003056}
+}
+
+@article{feng2019,
+  author  = {Feng, Jian Kui and Jin, Jing and Daly, Ian and Zhou, Jiale and Niu, Yugang and Wang, Xingyu and Cichocki, Andrzej},
+  title   = {An Optimized Channel Selection Method Based on Multifrequency {CSP}-Rank for Motor Imagery-Based {BCI} System},
+  journal = {Computational Intelligence and Neuroscience},
+  year    = {2019},
+  volume  = {2019},
+  pages   = {8068357},
+  doi     = {10.1155/2019/8068357}
+}
+
+@article{shiam2024,
+  author  = {Shiam, Abdullah Al and Hassan, Kazi Mahmudul and Islam, Md. Rabiul and Almassri, A. M. M. and Wagatsuma, H. and Molla, Md. Khademul Islam},
+  title   = {Motor Imagery Classification Using Effective Channel Selection of Multichannel {EEG}},
+  journal = {Brain Sciences},
+  year    = {2024},
+  volume  = {14},
+  number  = {5},
+  pages   = {462},
+  doi     = {10.3390/brainsci14050462}
+  % VERIFY: nama depan penulis ke-4 sampai ke-6 hanya terkonfirmasi sebagai inisial
+}
+
+% ---------- Teori dasar: EEG, ERD/ERS, spatial filtering ----------
+
+@article{buzsaki2012,
+  author  = {Buzs{\'a}ki, Gy{\"o}rgy and Anastassiou, Costas A. and Koch, Christof},
+  title   = {The origin of extracellular fields and currents---{EEG}, {ECoG}, {LFP} and spikes},
+  journal = {Nature Reviews Neuroscience},
+  year    = {2012},
+  volume  = {13},
+  number  = {6},
+  pages   = {407--420},
+  doi     = {10.1038/nrn3241}
+}
+
+@article{pfurtscheller1999,
+  author  = {Pfurtscheller, G. and Lopes da Silva, F. H.},
+  title   = {Event-related {EEG}/{MEG} synchronization and desynchronization: basic principles},
+  journal = {Clinical Neurophysiology},
+  year    = {1999},
+  volume  = {110},
+  pages   = {1842--1857},
+  doi     = {10.1016/S1388-2457(99)00141-8}
+}
+
+@article{blankertz2008,
+  author  = {Blankertz, Benjamin and Tomioka, Ryota and Lemm, Steven and Kawanabe, Motoaki and M{\"u}ller, Klaus-Robert},
+  title   = {Optimizing Spatial Filters for Robust {EEG} Single-Trial Analysis},
+  journal = {IEEE Signal Processing Magazine},
+  year    = {2008},
+  volume  = {25},
+  number  = {1},
+  pages   = {41--56},
+  doi     = {10.1109/MSP.2008.4408441}
+}
+
+@article{lotte2018,
+  author  = {Lotte, F. and Bougrain, L. and Cichocki, A. and Clerc, M. and Congedo, M. and Rakotomamonjy, A. and Yger, F.},
+  title   = {A review of classification algorithms for {EEG}-based brain--computer interfaces: a 10 year update},
+  journal = {Journal of Neural Engineering},
+  year    = {2018},
+  volume  = {15},
+  number  = {3},
+  pages   = {031005},
+  doi     = {10.1088/1741-2552/aab2f2}
+}
+
+% ---------- Konektivitas fungsional ----------
+
+@article{nolte2004,
+  author  = {Nolte, G. and Bai, O. and Wheaton, L. and Mari, Z. and Vorbach, S. and Hallett, M.},
+  title   = {Identifying true brain interaction from {EEG} data using the imaginary part of coherency},
+  journal = {Clinical Neurophysiology},
+  year    = {2004},
+  volume  = {115},
+  number  = {10},
+  pages   = {2292--2307},
+  doi     = {10.1016/j.clinph.2004.04.029}
+}
+
+@article{stam2007,
+  author  = {Stam, C. J. and Nolte, G. and Daffertshofer, A.},
+  title   = {Phase lag index: assessment of functional connectivity from multi channel {EEG} and {MEG} with diminished bias from common sources},
+  journal = {Human Brain Mapping},
+  year    = {2007},
+  volume  = {28},
+  number  = {11},
+  pages   = {1178--1193}
+  % VERIFY: DOI belum terkonfirmasi
+}
+
+@article{vinck2011,
+  author  = {Vinck, Martin and Oostenveld, Robert and van Wingerden, Marijn and Battaglia, Francesco and Pennartz, Cyriel M. A.},
+  title   = {An improved index of phase-synchronization for electrophysiological data in the presence of volume-conduction, noise and sample-size bias},
+  journal = {NeuroImage},
+  year    = {2011},
+  volume  = {55},
+  number  = {4},
+  pages   = {1548--1565},
+  doi     = {10.1016/j.neuroimage.2011.01.055}
+}
+
+% ---------- Dataset ----------
+
+@article{goldberger2000,
+  author  = {Goldberger, A. L. and Amaral, L. A. N. and Glass, L. and Hausdorff, J. M. and Ivanov, P. Ch. and Mark, R. G. and Mietus, J. E. and Moody, G. B. and Peng, C.-K. and Stanley, H. E.},
+  title   = {{PhysioBank}, {PhysioToolkit}, and {PhysioNet}: Components of a New Research Resource for Complex Physiologic Signals},
+  journal = {Circulation},
+  year    = {2000},
+  volume  = {101},
+  number  = {23},
+  pages   = {e215--e220}
+  % VERIFY: DOI tidak tercantum pada sumber yang dibuka (sitasi standar PhysioNet)
+}
+
+@article{schalk2004,
+  author  = {Schalk, Gerwin and McFarland, Dennis J. and Hinterberger, Thilo and Birbaumer, Niels and Wolpaw, Jonathan R.},
+  title   = {{BCI2000}: A General-Purpose Brain-Computer Interface ({BCI}) System},
+  journal = {IEEE Transactions on Biomedical Engineering},
+  year    = {2004},
+  volume  = {51},
+  number  = {6},
+  pages   = {1034--1043},
+  doi     = {10.1109/TBME.2004.827072}
+}
+
+% ---------- BELUM masuk .bib (tidak terverifikasi cukup) ----------
+% * Preprint arXiv:2605.00746 "Functional Connectivity-Guided Band Selection for Motor Imagery
+%   Brain-Computer Interfaces": judul terkonfirmasi, PDF tidak terbaca di sandbox, penulis tidak terkonfirmasi.
+% * Makalah MNE-Python (Gramfort dkk., 2013) dan MNE-Connectivity: belum diverifikasi sesi ini.
+% * Ramoser dkk. (2000) CSP asli: belum diverifikasi sesi ini.
+
+@misc{physionet_eegmmi,
+  title = {{EEG} Motor Movement/Imagery Dataset, version 1.0.0},
+  howpublished = {PhysioNet},
+  year = {2009},
+  doi = {10.13026/C28G6P},
+  url = {https://physionet.org/content/eegmmidb/1.0.0/}
+}
+
+@misc{mneconnectivitydocs,
+  title = {{MNE-Connectivity}: spectral\_connectivity\_epochs documentation},
+  author = {{MNE-Connectivity developers}},
+  howpublished = {Online documentation},
+  url = {https://mne.tools/mne-connectivity/stable/generated/mne_connectivity.spectral_connectivity_epochs.html},
+  note = {Accessed 2026-10-19}
+}
