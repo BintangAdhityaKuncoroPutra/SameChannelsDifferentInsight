@@ -1,4 +1,4 @@
-# THEORETICAL_FRAMEWORK.md — Stage 1
+# THEORETICAL_FRAMEWORK.md 
 
 **Prinsip:** algoritma bukan teori. CSP, LDA, wPLI, CDS, Jaccard, dan balanced accuracy adalah **alat** yang diturunkan dari pernyataan teoretis di tingkat atasnya. Label "grand theory" di sini adalah kerangka kerja kenyamanan untuk prinsip biofisika yang mapan, bukan satu teori tunggal yang diakui bidang sebagai "grand theory".
 
@@ -82,7 +82,7 @@ Konvergensi karena SNR **bukan bukti kopling saraf**. Karena itu S5 (CDSx vs ERD
 | Jaccard | evaluasi | Ukuran tumpang tindih | Tidak gunakan angka chance universal; peluang overlap bergantung pada 10 kandidat dan kebijakan pemilihan |
 | Leave-one-run-out bersarang | evaluasi | Desain validasi | Menjaga seleksi dari data uji |
 
-**Aturan penulisan untuk laporan:** CSP, wPLI, dan CDS disebut **metode/ukuran**, tidak pernah "teori". Teori adalah Level 1 dan 2.
+
 
 
 ## 5. Catatan sinkronisasi
