@@ -1,23 +1,9 @@
-# LITERATURE_REVIEW.md — Stage 1
+# LITERATURE_REVIEW.md 
 
-**Status:** diselaraskan dengan `PROJECT_SPEC.md`; cakupan verifikasi tetap ditandai. Disusun 19 Okt 2026.
-**Bahasa:** narasi Indonesia, istilah teknis Inggris.
-
-## 0. Cara membaca dokumen ini (batas verifikasi)
-
-Setiap makalah diberi tingkat bukti. Ini penting karena brief meminta metode dibaca dari teks lengkap, dan di sandbox itu tidak selalu bisa.
-
-| Tingkat | Arti |
-|---|---|
-| **FT** | Teks lengkap dibaca (PDF repositori terbuka) |
-| **AB+** | Abstrak + kutipan isi dari halaman penerbit/indeks; teks lengkap tidak terbuka di sandbox |
-| **AB** | Hanya abstrak/metadata |
-
-Kendala nyata: PMC memblokir akses otomatis (reCAPTCHA), `doi.org` untuk IEEE tidak mengembalikan teks, dan `physionet.org` tidak terjangkau. Jadi **pada audit awal hanya Feng dkk. (2019) yang terbaca penuh**. Untuk makalah lain, kolom "Keterbatasan" memuat apa yang terkonfirmasi, dan butir yang perlu Bintang cek di teks lengkap ditandai **[CEK]**. Tidak ada angka atau metode yang saya isi dari ingatan.
 
 ## 1. Peta literatur singkat
 
-Pemilihan kanal untuk motor imagery (MI) adalah topik mapan. Review Abdullah dkk. (2022) menyatakan tujuan utamanya: menurunkan kompleksitas komputasi, mengurangi overfitting, dan memperpendek waktu pemasangan; metodenya dibagi menjadi pendekatan berbasis klasifikasi dan tanpa klasifikasi [abdullah2022]. Keluarga metode yang muncul di sumber yang saya buka:
+Pemilihan kanal untuk motor imagery (MI) adalah topik mapan. Review Abdullah dkk. (2022) menyatakan tujuan utamanya: menurunkan kompleksitas komputasi, mengurangi overfitting, dan memperpendek waktu pemasangan; metodenya dibagi menjadi pendekatan berbasis klasifikasi dan tanpa klasifikasi [abdullah2022]. Keluarga metode yang muncul pada sumber:
 
 1. **Berbasis CSP:** CSP-rank memeringkat elektrode lewat bobot filter CSP, dan akurasi dipakai sebagai kriteria berhenti [feng2019].
 2. **Berbasis statistik per kanal:** entropi rata-rata kanal [shiam2024].
@@ -32,19 +18,17 @@ Kelompok ke-3 menunjukkan bahwa **menghubungkan informasi antar-kanal dengan pem
 | **Primary anchor** | Lou, Ye, Yao & Zhang (2023), *Less Is More: Brain Functional Connectivity Empowered Generalizable Intention Classification With Task-Relevant Channel Selection*, IEEE TNSRE. DOI 10.1109/TNSRE.2023.3252610 | Paling dekat: memilih kanal berbasis functional connectivity, memakai EEGMMI, dan menyimpulkan performa serupa dengan 20% data mentah |
 | Supporting 1 | Varsehi & Firoozabadi (2021), Neural Networks 133 | Pemilihan kanal berbasis Granger causality pada PhysioNet MI, 8 kanal |
 | Supporting 2 | Park & Chung (2020), IEEE Access 8 | Selisih koefisien korelasi antar-kelas dipakai memilih kanal untuk CSP; kerabat konseptual CDS |
-| Supporting 3 | Feng dkk. (2019), Comput Intell Neurosci | Baseline CSP-rank + LDA; satu-satunya teks lengkap terbaca |
+| Supporting 3 | Feng dkk. (2019), Comput Intell Neurosci | Baseline CSP-rank + LDA |
 | Supporting 4 | Shiam dkk. (2024), Brain Sciences 14(5) | CSP + SVM, tugas right hand vs right foot (mirip hands vs feet kita) |
 | Supporting 5 | Liang dkk. (2023), Cognitive Neurodynamics | Konektivitas inter-kanal sebagai dasar seleksi kanal (GCN) |
 | **Review** | Abdullah, Faye & Islam (2022), Bioengineering 9(12):726. DOI 10.3390/bioengineering9120726 | Lanskap metode seleksi kanal MI |
 | Metodologis | Vinck dkk. (2011); Nolte dkk. (2004) | Dasar wPLI dan imaginary coherency |
 
-**Tentang preprint:** dua temuan tidak dimasukkan ke anchor karena belum peer-reviewed dan/atau tidak terverifikasi: (a) arXiv:2605.00746 *Functional Connectivity-Guided Band Selection for MI-BCI* (snippet menyebut wPLI dan seleksi di dalam training fold; PDF tidak terbaca; **[CEK]** penulis dan metode), (b) preprint bioRxiv 2024 tentang pemilihan elektrode berbasis jaringan fungsional dengan synchronization likelihood (status review tidak terkonfirmasi). Keduanya layak dicek manual karena relevan untuk klaim novelty.
-
 ## 3. Matriks literatur
 
 Kolom: Dataset | Seleksi kanal | Klasifikasi | Konektivitas | Evaluasi | Temuan | Keterbatasan | Relevansi.
 
-### 3.1 Lou dkk. (2023) — primary anchor — AB+
+### 3.1 Lou dkk. (2023) — primary anchor 
 - **Judul/DOI:** *Less Is More: …* — 10.1109/TNSRE.2023.3252610
 - **Dataset:** EEGMMI (eegmmidb, PhysioNet), pengujian subject-independent, tugas imajinasi buka-tutup kepalan kiri/kanan.
 - **Seleksi kanal:** task-adaptive, dari graf yang dibangun dengan functional connectivity (bukan jarak elektrode).
@@ -55,7 +39,7 @@ Kolom: Dataset | Seleksi kanal | Klasifikasi | Konektivitas | Evaluasi | Temuan 
 - **Keterbatasan:** konektivitas dipakai sebagai **alat seleksi dan representasi**, bukan sebagai **objek yang dievaluasi** pada subset hasil seleksi lain. Tidak membandingkan subset terpilih-klasifikasi dengan subset terpilih-konektivitas. Model kompleks, lintas 109 subjek (bukan within-subject).
 - **Relevansi:** bukti paling kuat bahwa "konektivitas + seleksi kanal + EEGMMI" sudah dikerjakan. Judul proyek kita **berbagi frasa awal** "Less Is More" (lihat Addendum §A.1).
 
-### 3.2 Varsehi & Firoozabadi (2021) — AB
+### 3.2 Varsehi & Firoozabadi (2021) 
 - **Dataset:** PhysioNet MI. **Seleksi:** analisis Granger causality, ditambah klasterisasi komponen ICA menjadi artefak dan EEG normal.
 - **Klasifikasi:** CSP/RCSP dengan k-NN, SVM, LDA; kelas left vs right hand.
 - **Konektivitas:** Granger causality (terarah).
@@ -63,7 +47,7 @@ Kolom: Dataset | Seleksi kanal | Klasifikasi | Konektivitas | Evaluasi | Temuan 
 - **Keterbatasan:** frasa "best classifier for each subject" mengisyaratkan pemilihan klasifier memakai data uji, sehingga angka mungkin optimistis. **[CEK]** apakah seleksi kanal ada di dalam fold. Granger causality pada EEG sensor rentan volume conduction.
 - **Relevansi:** jumlah kanal sama (8) dan dataset sama; tetapi tugas left/right, bukan hands/feet, dan konektivitas dipakai untuk seleksi, bukan dievaluasi silang.
 
-### 3.3 Park & Chung (2020) — AB+
+### 3.3 Park & Chung (2020) 
 - **Dataset:** BCI Competition III IVa dan BCI Competition IV Dataset I.
 - **Seleksi kanal:** "distinctive channel" ditentukan dari jumlah kanal lain yang selisih koefisien korelasinya besar antar dua tugas MI; kelompok kanal terkorelasi kuat dibentuk; kelompok dengan Fisher score FBCSP tertinggi dipilih.
 - **Klasifikasi:** FBCSP. **Konektivitas:** koefisien korelasi (Pearson, simetris, rentan zero-lag).
@@ -71,7 +55,7 @@ Kolom: Dataset | Seleksi kanal | Klasifikasi | Konektivitas | Evaluasi | Temuan 
 - **Keterbatasan:** hanya dua dataset kompetisi; **[CEK]** detail validasi.
 - **Relevansi:** **selisih konektivitas antar-kelas sebagai dasar seleksi sudah ada** (versi korelasi). CDS kita adalah kerabat dekatnya dengan estimator berbeda (debiased wPLI², dikoreksi noise floor).
 
-### 3.4 Feng dkk. (2019) — FT
+### 3.4 Feng dkk. (2019) 
 - **Dataset:** BCI Competition III IVa (5 subjek, 118 kanal, 140 trial/kelas, right hand vs right foot) dan BCI Competition IV Dataset 1 (4 subjek sehat, 59 kanal, 200 trial kalibrasi).
 - **Seleksi:** CSP-rank per sub-band (7 band, 8–30 Hz); fitur CSP digabung, LASSO memilih fitur.
 - **Klasifikasi:** LDA. **Konektivitas:** tidak ada.
@@ -80,18 +64,18 @@ Kolom: Dataset | Seleksi kanal | Klasifikasi | Konektivitas | Evaluasi | Temuan 
 - **Keterbatasan (dari teks):** penulis menyatakan statistik tingkat grup tidak dilaporkan karena subjek sedikit. Jumlah kanal optimal dibaca dari kurva akurasi validasi rata-rata semua subjek, dan teks tidak menyatakan bahwa pemilihan itu terisolasi dari fold uji. Itu **kemungkinan sumber optimisme**, bukan kesimpulan pasti.
 - **Relevansi:** mewakili pendekatan "seleksi dioptimalkan untuk klasifikasi" yang kita beri nama S_clf; juga contoh bahwa kecilnya jumlah subjek lazim dan diakui.
 
-### 3.5 Shiam dkk. (2024) — AB+
+### 3.5 Shiam dkk. (2024)
 - **Dataset:** BCI Competition III-IVa dan IV-I. **Seleksi:** entropi rata-rata per kanal (entropi tinggi dipilih).
 - **Klasifikasi:** CSP per sub-band + SVM, right hand vs right foot.
 - **Konektivitas:** tidak ada. **[CEK]** protokol validasi.
 - **Relevansi:** contoh seleksi tanpa label; tugas hand vs foot sejalan dengan kita.
 
-### 3.6 Liang dkk. (2023) — AB
+### 3.6 Liang dkk. (2023) 
 - **Dataset:** tiga dataset MI. **Seleksi:** kanal diperlakukan sebagai graf; seleksi sebagai klasifikasi node dengan GCN; asumsinya kanal berguna berbagi informasi yang terukur lewat konektivitas inter-kanal.
 - **Keterbatasan:** **[CEK]** ukuran konektivitas, protokol, hasil.
 - **Relevansi:** kerabat lain dari "konektivitas → seleksi kanal".
 
-### 3.7 Abdullah dkk. (2022) — review — AB+
+### 3.7 Abdullah dkk. (2022) — review 
 - Mengulas algoritma seleksi kanal MI, tujuan, dan pasangan klasifikasinya pada berbagai dataset; menitikberatkan metode yang memilih kanal lebih sedikit dengan presisi tinggi. Reviewer peer-review mencatat bahwa analisis dalam review dinilai kurang mendalam oleh salah satu reviewer, jadi review ini lebih cocok sebagai peta, bukan bukti evaluatif.
 
 ### 3.8 Dasar metodologis
@@ -102,22 +86,10 @@ Kolom: Dataset | Seleksi kanal | Klasifikasi | Konektivitas | Evaluasi | Temuan 
 
 | Pertanyaan | Status di literatur yang saya periksa |
 |---|---|
-| Seleksi kanal MI memakai CSP/entropi/statistik dan dinilai dengan akurasi | **Mapan** [abdullah2022; feng2019; shiam2024] |
+| Seleksi kanal MI memakai CSP/entropi/statistik dan dinilai dengan akurasi | **Sudah diteliti** [abdullah2022; feng2019; shiam2024] |
 | Informasi hubungan antar-kanal dipakai untuk memilih kanal | **Sudah diteliti** [parkchung2020; varsehi2021; liang2023; lou2023] |
-| Selisih konektivitas antar-kelas sebagai kriteria seleksi | **Sudah ada** versi korelasi [parkchung2020]; versi graf fungsional [lou2023] |
-| Konektivitas debiased, dikoreksi null permutasi, sebagai metrik evaluasi pada subset | **Tidak ditemukan** pada sumber yang saya periksa |
-| Apakah subset terbaik-klasifikasi dan terbaik-konektivitas **bertepatan**, dan apakah yang satu menangkap diskriminasi yang lain, diuji **silang pada data uji** | **Tidak ditemukan** langsung |
-| Desain leave-one-run-out bersarang, dengan label-shuffle control, pada beberapa subjek EEGMMI | **Tidak ditemukan** pada kombinasi ini |
+| Selisih konektivitas antar-kelas sebagai kriteria seleksi | **Sudah diteliti** versi korelasi [parkchung2020]; versi graf fungsional [lou2023] |
+| Konektivitas debiased, dikoreksi null permutasi, sebagai metrik evaluasi pada subset | **Tidak ditemukan** |
+| Apakah subset terbaik-klasifikasi dan terbaik-konektivitas **bertepatan**, dan apakah yang satu menangkap diskriminasi yang lain, diuji **silang pada data uji** | **Tidak ditemukan** |
+| Desain leave-one-run-out bersarang, dengan label-shuffle control, pada beberapa subjek EEGMMI | **Tidak ditemukan** |
 
-**Peringatan atas klaim "tidak ditemukan":** pencarian saya terbatas (satu sesi, sebagian teks lengkap tertutup, dua preprint tak terbaca). "Tidak ditemukan" berarti **tidak terdeteksi**, bukan "tidak ada". Naskah akhir sebaiknya memakai kalimat serupa "sejauh yang kami telusuri".
-
-
-## 5. Pembaruan verifikasi dan pembatasan klaim (19 Oktober 2026)
-
-- Identitas Lou dkk. (2023), DOI `10.1109/TNSRE.2023.3252610`, vol. 31, hlm. 1888–1899 terkonfirmasi lewat PubMed/DOAJ. Versi penulis tersedia melalui URL PDF IEEE yang terindeks; rincian algoritma dan estimator konektivitas **belum diaudit penuh** pada sesi ini. https://pubmed.ncbi.nlm.nih.gov/37028028/
-- Varsehi & Firoozabadi (2021), *Neural Networks* 133:193–206, DOI `10.1016/j.neunet.2020.11.002`, terkonfirmasi lewat penerbit/PubMed; protokol seleksi internal fold **belum dipastikan**. https://pubmed.ncbi.nlm.nih.gov/33220643/
-- Vinck dkk. (2011), *NeuroImage* 55(4):1548–1565, DOI `10.1016/j.neuroimage.2011.01.055`, terkonfirmasi dan menjadi dasar estimator `wpli2_debiased`. https://pubmed.ncbi.nlm.nih.gov/21276857/
-- Dokumentasi MNE-Connectivity menyebut `wpli` dan `wpli2_debiased` sebagai dua estimator berbeda. https://mne.tools/mne-connectivity/stable/generated/mne_connectivity.spectral_connectivity_epochs.html
-- Materi tujuh PDF kuliah menjadi konteks pendidikan, bukan bukti bahwa semua klaim novelty telah diverifikasi lewat telaah literatur menyeluruh.
-
-**Posisi penelitian final:** tidak mengusulkan channel selection baru; menguji kesesuaian dua objektif seleksi pada kumpulan 10 kandidat tetap dengan evaluasi silang di run yang ditahan. Keberadaan perbandingan ini dalam literatur luas belum dapat dieliminasi; hindari klaim prioritas.
